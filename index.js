@@ -6,6 +6,7 @@ import {
   Platform,
   StyleSheet,
   Animated,
+  StatusBar
 } from 'react-native';
 import hoistStatics from 'hoist-non-react-statics';
 
@@ -90,7 +91,7 @@ const statusBarHeight = isLandscape => {
     if (global.Expo) {
       return global.Expo.Constants.statusBarHeight;
     } else {
-      return 0;
+      return StatusBar.currentHeight;
     }
   }
 
